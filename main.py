@@ -10,6 +10,11 @@ app = Flask(__name__)
 user_chat_id = 726356323
 
 
+@app.route('/')
+def home():
+    return "Hello, World!"
+
+
 @app.route('/auth', methods=['GET'])
 def get_auth_token():
     # print(request.json)
